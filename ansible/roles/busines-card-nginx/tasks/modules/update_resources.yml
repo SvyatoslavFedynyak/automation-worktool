@@ -1,0 +1,13 @@
+---
+- name: Create resource directory
+  file:
+    state: directory
+    path: "{{src_root}}"
+    mode: 0700
+    owner: nginx
+
+- name: Update from git
+  git: 
+    repo: "{{repo_url}}"
+    dest: "{{src_root}}"
+...

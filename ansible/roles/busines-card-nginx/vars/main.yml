@@ -1,0 +1,6 @@
+---
+repo_url: "https://github.com/SvyatoslavFedynyak/my-web-site.git"
+src_root:  "/var/lib/nginx/site-src"
+site_conf_path: "/etc/nginx/conf.d"
+site_name: "card"
+...

@@ -1,0 +1,16 @@
+---
+- name: Open http/https ports
+  firewalld: 
+    zone: public
+    port: "{{port}}"
+    state: enabled
+    immediate: True
+    permanent: True
+  with_items:
+  - 80/tcp
+  - 443/tcp
+  loop_control: 
+    loop_var: port
+  #notify:
+  #- Save firewalld
+...

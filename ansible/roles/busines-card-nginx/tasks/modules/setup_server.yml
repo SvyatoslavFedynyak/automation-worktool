@@ -1,0 +1,16 @@
+--- 
+- name: Configurate Nginx
+  template:
+    src: nginx_conf.j2
+    dest: /etc/nginx/nginx.conf
+  notify:
+  - Restart Nginx
+
+- name: Set up config file
+  template:
+    src: server_conf.j2
+    dest: "{{site_conf_path}}/busines-card.conf"
+    mode: 0666
+  notify:
+  - Restart Nginx
+...

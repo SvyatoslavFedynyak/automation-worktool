@@ -1,0 +1,11 @@
+---
+- name: Main
+  include_tasks: "{{item}}"
+  with_items:
+    - modules/install_nginx.yml
+    - modules/install_git.yml
+    - modules/update_resources.yml  
+    - modules/open_ports.yml
+    - modules/setup_server.yml
+...
+  
